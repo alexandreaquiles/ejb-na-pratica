@@ -1,0 +1,5 @@
+.metadata
+*/build/
+*/orbtrc.*
+*/.apt_generated
+
