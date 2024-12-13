@@ -18,4 +18,5 @@ public interface LivroService {
 
 	List<LivroEntity> listarTodos();
 
+	Optional<LivroEntity> aplicarDesconto(Long id, double desconto);
 }

@@ -70,5 +70,14 @@ public class LivroResource {
 			return Response.status(Response.Status.NOT_FOUND).build();
 		}
 	}
+	
+	@Path("/{id}/promo")
+	@PUT
+	public Response megaPromocao(@PathParam("id") Long id) {
+		return livroService.aplicarDesconto(id, 0.5)
+			.map(livro -> Response.ok(livro))
+			.orElse(Response.status(Response.Status.NOT_FOUND))
+			.build();
+	}
 
 }

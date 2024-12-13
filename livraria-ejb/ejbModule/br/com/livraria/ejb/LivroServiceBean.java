@@ -54,4 +54,22 @@ public class LivroServiceBean implements LivroService {
 		return em.createQuery("select l from LivroEntity l", LivroEntity.class).getResultList();
 	}
 
+	@Override
+	public Optional<LivroEntity> aplicarDesconto(Long id, double desconto) {
+		return buscarPorId(id)
+				.map(livro -> {
+					
+					livro.descontar(desconto);
+					
+					// livro = em.merge(livro); // NÃO PRECISO fazer o MERGE
+												// O find já deixa o objeto gerenciado
+												// Basta eu fazer alterações nesse objeto
+												// MERGE não é update
+					
+					return livro;
+				});
+	}
+	
+	
+
 }

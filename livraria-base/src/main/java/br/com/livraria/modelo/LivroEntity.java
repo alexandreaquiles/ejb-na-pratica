@@ -43,4 +43,8 @@ public class LivroEntity implements Serializable {
 		this.preco = preco;
 	}
 
+	public void descontar(double desconto) {
+		this.preco = preco * desconto;
+	}
+
 }
