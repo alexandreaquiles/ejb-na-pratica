@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+        
     <wb-module deploy-name="livraria-ear">
+                
         <wb-resource deploy-path="/" source-path="/" tag="defaultRootSource"/>
+                
         <dependent-module archiveName="livraria-base.jar" deploy-path="/lib" handle="module:/resource/livraria-base/livraria-base">
+                        
             <dependency-type>uses</dependency-type>
+                    
         </dependent-module>
+                
         <dependent-module archiveName="livraria-ejb.jar" deploy-path="/" handle="module:/resource/livraria-ejb/livraria-ejb">
+                        
+            <dependency-type>uses</dependency-type>
+                    
+        </dependent-module>
+        <dependent-module archiveName="livraria-web.war" deploy-path="/" handle="module:/resource/livraria-web/livraria-web">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+            
     </wb-module>
+    
 </project-modules>
