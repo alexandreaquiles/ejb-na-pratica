@@ -3,13 +3,5 @@
 	<persistence-unit name="livrariapu">
 		<jta-data-source>jdbc/livrariadsturma2</jta-data-source>
 		<class>br.com.livraria.modelo.LivroEntity</class>
-		<properties>
-	        <property name="eclipselink.logging.level" value="FINEST"/>
-	        <property name="eclipselink.logging.parameters" value="true"/>
-	        <property name="eclipselink.logging.level.sql" value="FINEST"/>
-	        <property name="eclipselink.logging.timestamp" value="true"/>
-	        <property name="eclipselink.logging.session" value="true"/>
-	        <property name="eclipselink.logging.thread" value="true"/>
-		</properties>
 	</persistence-unit>
 </persistence>
